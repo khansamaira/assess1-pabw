@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        #container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #container img {
+            width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        #container h1 {
+            margin-bottom: 10px;
+        }
+        #container p {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img id="profile-pic" src="foto.jpeg" alt="Foto Anda">
+        <h1 id="name">Khansa Maira Ifana Putri</h1>
+        <p id="nim">NIM: 67012223094</p>
+        <p id="kelas">Kelas: D3SI 46-04</p>
+    </div>
+
+    <script>
+        // Fungsi untuk mengubah elemen pada halaman
+        function changeProfile(name, nim, kelas, photo) {
+            document.getElementById("name").innerText = name;
+            document.getElementById("nim").innerText = "NIM: " + nim;
+            document.getElementById("kelas").innerText = "Kelas: " + kelas;
+            document.getElementById("profile-pic").src = photo;
+        }
+
+        // Panggil fungsi changeProfile dengan data Anda
+        changeProfile("Khansa Maira Ifana Putri", "6701223094", "D3SI 46-04", "foto.jpeg");
+    </script>
+</body>
+</html>
