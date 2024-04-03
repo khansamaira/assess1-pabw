@@ -32,6 +32,12 @@
         #container p {
             margin-bottom: 5px;
         }
+        #container input, #container select, #container button {
+            margin: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -40,6 +46,15 @@
         <h1 id="name">Khansa Maira Ifana Putri</h1>
         <p id="nim">NIM: 67012223094</p>
         <p id="kelas">Kelas: D3SI 46-04</p>
+        
+        <!-- Elemen baru -->
+        <input type="text" id="jumlah" placeholder="Jumlah">
+        <select id="pilihan">
+            <option value="sherlock">Sherlock</option>
+            <option value="lupin">Lupin</option>
+            <option value="aladin">Aladin</option>
+        </select>
+        <button id="tombol">Submit</button>
     </div>
 
     <script>
@@ -53,6 +68,13 @@
 
         // Panggil fungsi changeProfile dengan data Anda
         changeProfile("Khansa Maira Ifana Putri", "6701223094", "D3SI 46-04", "foto.jpeg");
+
+        // Event listener untuk tombol submit
+        document.getElementById("tombol").addEventListener("click", function() {
+            var jumlah = document.getElementById("jumlah").value;
+            var pilihan = document.getElementById("pilihan").value;
+            alert("Anda memilih " + jumlah + " " + pilihan);
+        });
     </script>
 </body>
 </html>
